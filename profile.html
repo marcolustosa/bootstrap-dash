@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    <!-- Extra CSS -->
+    <link rel="stylesheet" href="css/style.css"/>
+    
+    <!-- Extra JS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+    <title>Code Dashboard</title>
+  </head>
+      <body id="body-pd">
+         <!-- Cabeçalho -->
+        <header class="header" id="header">
+            <div class="header_toggle"> <i class="fas fa-bars" id="header-toggle"></i> </div>
+            <div class="lateralcontent">
+              <div class="nav-item dropdown">
+                <a onclick="myFunction('myDropdown')" type="button" class="btn btn-primary1 fas fa-adjust fa-2x" role="button" id="dropdownMenuLink"></a>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#"><img src="img/lampon.png" alt="Português" width="25" height="25" /></i></a>
+                  <a href="#"><img src="img/lampoff.png" alt="Português" width="25" height="25" /></i></a>                
+                </div>
+              </div>
+            <div class="nav-item dropdown">
+              <a onclick="myFunction('myDropdown2')" type="button" class="btn btn-primary1 fas fa-globe-americas fa-2x" role="button" id="dropdownMenuLink"></a>
+              <div id="myDropdown2" class="dropdown-content">
+                <a href="#"><img src="img/brasil.png" alt="Português" width="30" height="30" /></a>
+                <a href="#"><img src="img/eua.png" alt="English" width="30" height="30" /></a>                
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a onclick="myFunction('myDropdown3')" type="button" class="btn btn-primary1 fas fa-user-cog fa-2x" role="button" id="dropdownMenuLink"></a>
+              <div id="myDropdown3" class="dropdown-content">
+                <a class="letras" href="#"><p>Settings</p></a>
+                <a class="letras" href="#"><p>Logoff</p></a>    
+                <a class="letras" href="#"><p>Help</p></a>      
+              </div>
+            </div>
+            <!-- Fim do Cabeçalho --> 
+          </div>
+          <!-- Barra Lateral -->
+        </header>
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+              <a href="#" class="nav_logo"> <span class="nav_logo-name"><i class="fas fa-code fa-lg"> </i> <h2>Dashboard</h2></span> </a>
+                  
+                 <div class="nav_list" id="menu"> 
+                      <a href="index.html" class="nav_link"> <i class="fas fa-tachometer-alt"></i> <span>Dashboard</span> </a> 
+                      <a href="#" class="nav_link active"> <i class="fas fa-user-circle"></i> <span>Usuário</span> </a> 
+                      <a href="#" class="nav_link"><i class="far fa-comment-dots"></i>Mensagens<span class="badge rounded-pill bg-danger">4</span></a>
+                      <a href="#" class="nav_link"> <i class="far fa-bookmark"></i> <span>Favoritos</span> </a> 
+                      <a href="#" class="nav_link"> <i class="far fa-folder"></i> <span>Arquivos</span> </a> 
+                      <a href="#" class="nav_link"> <i class="fas fa-chart-bar"></i><span>Estatisticas</span> </a> 
+                    
+                  </div> 
+                <a href="#" class="nav_link"> <i class="fas fa-sign-out-alt"></i> <span class="nav_name">Sair</span> </a>
+            </nav>
+        </div>
+    <!-- Fim da Barra Lateral -->
+    <!--Inicio do Conteudo-->
+    <br>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+                <div class="card-header text-center"> <h5>Admin Painel</h5> </div>
+                <div class="card-body">
+                <p class="mb-3"><strong>Redefinir Senha:</strong></p>
+                 <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Atual:</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Nova Senha:</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Digite Novamente:</label>
+                    <input type="password" class="form-control is-invalid" id="exampleInputPassword1">
+                  </div>
+                  <button type="submit" class="btn btn-primary bg-gradient btn-sm">Confirmar</button>
+                  <hr>
+                  <p class="mb-3"><strong>Excluir Conta:</strong></p>
+                  <small>Atenção, esta ação não poder ser desfeita, depois de confirmada suas informações serão perdidas!</small>
+                  <br></br>
+                  <button type="submit" class="btn btn-danger bg-gradient btn-sm">Excluir</button>
+                </div>
+              </div>
+          </div>
+          <div class="col-6">
+            <div class="card">
+                <div class="card-header text-center"> <h5>Profile</h5> </div>
+                <div class="card-body text-center">
+                    <img src="img/avatars/girl1.jpg" class="perfil rounded-circle mx-auto d-block" alt="...">
+                    <h4> John Snow</h4>
+                    <span>Software Developer</span>
+
+                    <br> </br>
+                    
+                    <div class="container text-center">
+                        <div class="row">
+                          <div class="col">
+                          </div>
+                          <div class="col-6 ">
+                            <div class="d-flex w-100 justify-content-evenly">
+                              <button type="button" class="btn btn-light"><i class="fas fa-phone fa-lg"></i></button>
+                              <button type="button" class="btn btn-light"><i class="fas fa-comments fa-lg"></i></button>
+                              <button type="button" class="btn btn-light"><i class="fas fa-money-check-alt fa-lg"></i></button>
+                            </div>
+                            </div>
+                            <br>
+                            <br>
+                           <div class="col">
+                         </div>
+                        </div>
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                              <label class="form-label">Nome</label>
+                              <input type="text" class="form-control" id="inputname" placeholder="John Snow">
+                            </div>
+                            <div class="col-md-6">
+                              <label for="inputPassword4" class="form-label">Password</label>
+                              <input type="password" class="form-control" id="inputPassword4">
+                            </div>
+                            <div class="col-12">
+                              <label for="inputAddress" class="form-label">Endereço</label>
+                              <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Tronos, 100">
+                            </div>
+                            <div class="col-12">
+                              <label for="inputAddress2" class="form-label">Empresa</label>
+                              <input type="text" class="form-control" id="inputAddress2" placeholder="Code Develops Filial 1">
+                            </div>
+                            <div class="col-md-6">
+                              <label for="inputCity" class="form-label">Cidade</label>
+                              <input type="text" class="form-control" id="inputCity" placeholder="Recife">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="inputState" class="form-label">Estado</label>
+                              <select id="inputState" class="form-select">
+                                <option selected>Escolha...</option>
+                                <option>MG</option>
+                                <option>PE</option>
+                                <option>PR</option>
+                                <option>RS</option>
+                                <option>SC</option>     
+                                <option>SP</option>
+                              </select>
+                            </div>
+                            <div class="col-md-2">
+                              <label for="inputZip" class="form-label">CEP</label>
+                              <input type="text" class="form-control" id="inputZip">
+                            </div>
+                            
+                            <div class="col-12">
+                              <button type="submit" class="btn btn-success bg-gradient btn-sm">Editar</button>
+                            </div>
+                          </form>
+                      </div>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <div class="card-header text-center"> <h5>Accout Settings</h5> </div>
+                <div class="card-body">
+                   <p class="mb-3"><strong>Notificações</strong></p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Receber
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Não Receber
+                        </label>
+                      </div>
+                      <hr>
+                      <p class="mb-3"><strong>Mostrar Status:</strong></p>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Sim
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Não
+                        </label>
+                      </div>
+                      <hr>
+                      <p class="mb-3"><strong>Aceitar tarefas:</strong></p>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Todas
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Redirecionadas
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Nenhuma
+                        </label>
+                      </div>
+                      <hr>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Deixar visivel painel de códigos em produção</label>
+                      </div>
+                      
+                </div>
+              </div>
+          </div>
+        </div>
+        </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src=javascript/sidebar.js></script>
+    <script src=javascript/btn.js></script>
+             
+    <script src="https://kit.fontawesome.com/8d32db23c4.js" crossorigin="anonymous"></script>    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
